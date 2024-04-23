@@ -8,8 +8,7 @@ user_string = input("Введите строку: ")
 changed_string1 = user_string.replace(" ", "-")  # вариант 1
 
 temp_string = user_string.split(" ")  # вариант 2, временное удаление пробелов
-# вариант 2, и склейка с вставлением "-"
-changed_string2 = "-".join(temp_string)
+changed_string2 = "-".join(temp_string)  # вариант 2, склейка с вставлением "-"
 
 # в задании не было необходимости вывода измененной строки, просто для проверки :-)
 print(changed_string1)
