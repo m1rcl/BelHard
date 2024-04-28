@@ -3,9 +3,10 @@
 
 # ничего лучше в голову не пришло
 user_input = input(
-    "Введите три числа, хотя на самом деле вы може ввести любое количество чисел, разделяя их пробелами: ")
-count_number = len(user_input.split(" "))
-count_negative = user_input.count("-")
+    "Введите три числа, разделяя их пробелами: ")
+split_numbers = user_input.split(" ")
+count_zero = user_input.count("-")
 
-print(f"Вы ввели {count_number - count_negative} положительных числа и {
-      count_negative} отрицательных числа.")
+print(f"Вы ввели {(float(split_numbers[0]) > 0) + (float(split_numbers[1]) > 0) +
+      (float(split_numbers[2]) > 0)} положительных числа и {(float(split_numbers[0]) < 0) +
+      (float(split_numbers[1]) < 0) + (float(split_numbers[2]) < 0)} отрицательных числа.")
