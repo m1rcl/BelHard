@@ -6,10 +6,8 @@ try:
 except ValueError:
     print("введено не число")
 
-even_numbers_list = (number for number in range(
-    1, count_numbers) if not (number % 2))
-
-for number in even_numbers_list:
-    print(number, end=" ")
-    if not (number % 5):
-        print()
+for number in range(2, count_numbers):
+    if not (number % 2):
+        print(number, end=" ")
+        if not (number % 5):
+            print()
