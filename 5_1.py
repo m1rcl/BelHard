@@ -11,10 +11,13 @@ try:
     if multiplicity_number == 0:
         raise ValueError
 
-    while count_numbers > 0:
-        if not (number % multiplicity_number):
-            print(number, end=" ")
-            count_numbers -= 1
-        number += 1
+    number += 1
+    if (number % multiplicity_number):
+        number = (number // abs(multiplicity_number) + 1) * \
+            abs(multiplicity_number)
+    for _ in range(count_numbers):
+        print(number, end=" ")
+        number = number + abs(multiplicity_number)
+
 except ValueError:
     print("Введены неверные данные")
