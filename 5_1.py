@@ -8,7 +8,7 @@ try:
         raise ValueError
     multiplicity_number = int(
         input("Введите целое число которому должно быть кратны выводимые числа: "))
-    if multiplicity_number <= 0:
+    if multiplicity_number == 0:
         raise ValueError
 
     while count_numbers > 0:
