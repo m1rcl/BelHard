@@ -7,7 +7,7 @@ def convert_str(str_number):
                    '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9}
     for _ in range(0, len(str_number)):
         number = number + \
-            (dict_number[str_number[len(str_number) - 1 - _]] * (10**(_)))
+            (dict_number[str_number[len(str_number) - 1 - _]] * (10 ** _))
     return number
 
 
@@ -21,9 +21,11 @@ def dec_to_bin(number):
 
 def bin_to_dec(number):
     result = 0
-    for _ in range(0, len(str(number))):
-        result = result + (number // 10**(len(str(number)) - 1 - n)
-                           ) * (2**(len(str(number)) - 1))
+    power = 0
+    while number > 0:
+        result = result + (number - (number // 10) * 10) * (2 ** power)
+        number = number // 10
+        power += 1
     return result
 
 
