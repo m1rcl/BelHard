@@ -17,6 +17,6 @@ def cod_to_morze(input_string):
     return output_string
 
 
-user_input = input("Введите текст для кодирования с помощью кода Морзе: ")
+user_input = input("Введите текст для кодирования c помощью кода Морзе: ")
 
 print("Кодированный текст: ", cod_to_morze(user_input))
