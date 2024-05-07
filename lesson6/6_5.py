@@ -2,8 +2,9 @@
 # функции reversed, а так же дополнительного списка и среза
 
 def reversing_list(some_list):
-    for _ in range(0, len(some_list) // 2):
-        some_list[_], some_list[-(_ + 1)] = some_list[-(_ + 1)], some_list[_]
+    for position in range(0, len(some_list) // 2):
+        some_list[position], some_list[-(position + 1)] = \
+            some_list[-(position + 1)], some_list[position]
     return some_list
 
 

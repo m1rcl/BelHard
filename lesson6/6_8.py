@@ -2,15 +2,14 @@
 # поступает город, необходимо сказать из какой он страны
 
 def country_identificating(user_input):
-    city_dict = {"England": "London", "France": "Paris",
-                 "Russia": "Moscow", "Belarus": "Minsk"}
-    for (country, city) in city_dict.items():
-        # for country, city in city_dict.items():
-        if user_input == city:
+    city_dict = {"England": ["London", "Manchester", "York"], "France": ["Paris", "Orlean", "Lionne"],
+                 "Russia": ["Moscow", "St. Peterburg", "Smolensk"], "Belarus": ["Minsk", "Brest", "Mogilev"]}
+    for (country, cities) in city_dict.items():
+        if user_input in cities:
             return country
     else:
-        return "неизвестного государства"
+        return "неизвестной стране"
 
 
-user_input = input("Введите название столицы: ")
-print(f"{user_input} столица {country_identificating(user_input)}")
+user_input = input("Введите название города: ")
+print(f"{user_input} находится в {country_identificating(user_input)}")

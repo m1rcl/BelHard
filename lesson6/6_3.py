@@ -3,10 +3,10 @@
 
 def shift_list(user_list, shift):
     output_list = []
-    for _ in range(shift + 1, len(user_list)):
-        output_list.append(user_list[_])
-    for _ in range(0, shift + 1):
-        output_list.append(user_list[_])
+    for position in range(shift + 1, len(user_list)):
+        output_list.append(user_list[position])
+    for position in range(0, shift + 1):
+        output_list.append(user_list[position])
     return output_list
 
 
