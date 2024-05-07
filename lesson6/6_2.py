@@ -7,13 +7,13 @@ def cod_to_morze(input_string):
                   "H": "....", "I": "..", "J": ".---", "K": "-.-", "L": ".-..", "M": "--",
                   "N": "-.", "O": "---", "P": ".--.", "Q": "--.-", "R": ".-.", "S": "...",
                   "T": "-", "U": "..-", "V": "...-", "W": ".--", "X": "-..-", "Y": "-.--",
-                  "Z": "--..", "0": "-----", "1": ".----", "1": "..---", "1": "...--",
+                  "Z": "--..", "0": "-----", "1": ".----", "2": "..---", "3": "...--",
                   "4": "....-", "5": ".....", "6": "-....", "7": "--...", "8": "---..",
                   "9": "----.", " ": " "}
     input_string = input_string.upper()
     output_string = ""
     for letter in input_string:
-        output_string += dictionary[letter]
+        output_string += dictionary[letter] + " "
     return output_string
 
 
