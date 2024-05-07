@@ -5,9 +5,10 @@ def convert_str(str_number):
     number = 0
     dict_number = {'0': 0, '1': 1, '2': 2, '3': 3,
                    '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9}
-    for _ in range(0, len(str_number)):
+    for position in range(0, len(str_number)):
         number = number + \
-            (dict_number[str_number[len(str_number) - 1 - _]] * (10 ** _))
+            (dict_number[str_number[len(str_number) - 1 - position]]
+             * (10 ** position))
     return number
 
 
