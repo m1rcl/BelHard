@@ -6,8 +6,7 @@ try:
 except ValueError:
     print("введено не число")
 
-for number in range(2, count_numbers):
-    if not (number % 2):
-        print(number, end=" ")
-        if not (number % 5):
-            print()
+for number in range(2, count_numbers, 2):
+    print(number, end=" ")
+    if not (number % 10):
+        print()

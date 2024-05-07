@@ -18,7 +18,7 @@ users_data = {
 }
 
 print("Элетронная почта следующих пользователей не известна:")
-for id in users_data:
-    if "email" not in users_data[id].keys() or not users_data[id]["email"]:
-        print(users_data[id].get("first name"),
-              users_data[id].get("last name"))
+for user_id in users_data:
+    if "email" not in users_data[user_id].keys() or not users_data[user_id]["email"]:
+        print(users_data[user_id].get("first name"),
+              users_data[user_id].get("last name"))
