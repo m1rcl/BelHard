@@ -5,10 +5,10 @@
 def count_list(some_list):
     output_list = []
     for _ in range(0, len(some_list)):
-        print(some_list[_ - 1], some_list[_],
-              some_list[(len(some_list) + 1) - (len(some_list) - _)])
-        sum_numbers = some_list[_ - 1] + some_list[_] + \
-            some_list[(len(some_list) + _) - len(some_list)]
+        if _ != len(some_list) - 1:
+            sum_numbers = some_list[_ - 1] + some_list[_ + 1]
+        else:
+            sum_numbers = some_list[_ - 1] + some_list[0]
         output_list.append(sum_numbers)
     return output_list
 

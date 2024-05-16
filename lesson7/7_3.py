@@ -27,7 +27,8 @@ class Category():
                 raise ValueError
         except ValueError:
             print(f"category: {category} exist in categories by index {
-                  cls.categories.index(category)}!")
+                cls.categories.index(category)}!")
+
 
     def get(cls, index: int):
         try:
@@ -38,15 +39,21 @@ class Category():
         except IndexError:
             print(f"index: {index} not exist in categories!")
 
+
     def delete(cls, index: int):
-        if cls.categories[index]:
-            del cls.categories[index]
+        try:
+            if cls.categories[index]:
+                del cls.categories[index]
+            else:
+                raise IndexError
+        except IndexError:
+            print(f"index: {index} not exist in categories!")
+
 
     def update(cls, index: int, category: str):
         try:
             if cls.categories[index]:
-                category_uniq = set(cls.categories)
-                if category not in category_uniq:
+                if category not in cls.categories:
                     cls.categories[index] = category
                 else:
                     raise ValueError
