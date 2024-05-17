@@ -30,7 +30,7 @@ class Category():
 
     def get(cls, index: int):
         try:
-            if cls.categories[index]:
+            if index <= len(cls.categories):
                 return cls.categories[index].get("name")
             else:
                 raise IndexError
@@ -40,7 +40,7 @@ class Category():
 
     def delete(cls, index: int):
         try:
-            if cls.categories[index]:
+            if index <= len(cls.categories):
                 del cls.categories[index]
             else:
                 raise IndexError
@@ -51,7 +51,7 @@ class Category():
 
     def update(cls, index: int, category: str):
         try:
-            if cls.categories[index]:
+            if index <= len(cls.categories):
                 category_uniq = set()
                 for _ in range(len(cls.categories)):
                     category_uniq.update(cls.categories[_].values())
@@ -69,7 +69,7 @@ class Category():
 
     def make_published(cls, index: int):
         try:
-            if cls.categories[index]:
+            if index <= len(cls.categories):
                 cls.categories[index].update({"is_published": True})
             else:
                 raise IndexError
@@ -79,7 +79,7 @@ class Category():
 
     def make_unpublished(cls, index: int):
         try:
-            if cls.categories[index]:
+            if index <= len(cls.categories):
                 cls.categories[index].update({"is_published": False})
             else:
                 raise IndexError
