@@ -32,7 +32,7 @@ class Category():
 
     def get(cls, index: int):
         try:
-            if cls.categories[index]:
+            if index <= len(cls.categories):
                 return cls.categories[index]
             else:
                 raise IndexError
@@ -42,7 +42,7 @@ class Category():
 
     def delete(cls, index: int):
         try:
-            if cls.categories[index]:
+            if index <= len(cls.categories):
                 del cls.categories[index]
             else:
                 raise IndexError
@@ -52,7 +52,7 @@ class Category():
 
     def update(cls, index: int, category: str):
         try:
-            if cls.categories[index]:
+            if index <= len(cls.categories):
                 if category not in cls.categories:
                     cls.categories[index] = category
                 else:
