@@ -4,12 +4,9 @@
 
 def count_list(some_list):
     output_list = []
-    for _ in range(0, len(some_list)):
-        if _ != len(some_list) - 1:
-            sum_numbers = some_list[_ - 1] + some_list[_ + 1]
-        else:
-            sum_numbers = some_list[_ - 1] + some_list[0]
-        output_list.append(sum_numbers)
+    for _ in range(0, len(some_list) - 1):
+        output_list.append(some_list[_ - 1] + some_list[_ + 1])
+    output_list.append(some_list[-2] + some_list[0])
     return output_list
 
 
