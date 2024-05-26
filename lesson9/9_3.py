@@ -6,9 +6,9 @@
 
 from yaml import safe_load
 
-with open("D:/Projects/BelHard/lesson9/builds.yaml", "r") as file:
+with open("builds.yaml", "r") as file:
     builds_file = safe_load(file)
-with open("D:/Projects/BelHard/lesson9/tasks.yaml", "r") as file:
+with open("tasks.yaml", "r") as file:
     tasks_file = safe_load(file)
 
 build_name = 'forward_interest'
